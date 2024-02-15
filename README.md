@@ -1,2 +1,5 @@
 # MockRepo
-This is MockRepo (III) a place to try to get to know R and how it communicates with github. This is going to be a romance of epic proportions. 
+This is MockRepo (II) - a place to try to get to know how R communicates with github. 
+The data I have chosen are fictional and random. 
+Through the ages there have been arguments between warring goblin houses as to which lineage boasts the most and biggest bogeys. Alas! There need no longer be any bloodshed as - with some R and github skullduggery - this dispute can finally be settled. 
+- No goblins were hurt in the making of this. 
