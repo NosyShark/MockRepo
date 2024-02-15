@@ -25,13 +25,18 @@ gobnumH <- read_sheet("https://docs.google.com/spreadsheets/d/1URCJQLwtJAjhm4-3_
                names_to = "variable", values_to = "value")
 
 # make a plot of gobnumH
-  ggplot(gobnumH) +
+ggplot(gobnumH) +
   geom_boxplot(aes(y = value, x = House)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   facet_wrap(vars(variable), scales = "free")
   
+# adding colour to the plot to increase goblin-core aesthetic
+##ggplot(gobnumH) + 
+  ##geom_boxplot(fill = "#F0F4C3", colour = "#827717")
+  
 # now making a dataframe with observations classified by nose size
-  gobnumS <- read_sheet("https://docs.google.com/spreadsheets/d/1URCJQLwtJAjhm4-3__Ckocf7O76nBu-JjYJZP2a3ozA/edit#gid=0", sheet = "GoblinBoogers") %>%
+
+gobnumS <- read_sheet("https://docs.google.com/spreadsheets/d/1URCJQLwtJAjhm4-3__Ckocf7O76nBu-JjYJZP2a3ozA/edit#gid=0", sheet = "GoblinBoogers") %>%
     select(!c("House", "Colour", "WetDry")) %>% 
     filter(Count > 0) %>%
     pivot_longer(cols = c("Count", "MeanDiameter(mm)", "MeanWeight(g)"), 
