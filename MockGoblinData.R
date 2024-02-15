@@ -26,11 +26,10 @@ gobnumH <- read_sheet("https://docs.google.com/spreadsheets/d/1URCJQLwtJAjhm4-3_
 
 # make a plot of gobnumH
 ggplot(gobnumH) +
-  geom_boxplot(aes(y = value, x = House)) +
+  geom_boxplot(aes(y = value, x = House, fill = House)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  facet_wrap(vars(variable), scales = "free")
-  
-# adding colour to the plot to increase goblin-core aesthetic
+  facet_wrap(vars(variable), scales = "free") +
+  scale_fill_brewer(palette = "BuPu")
 
   
 # now making a dataframe with observations classified by nose size
@@ -42,6 +41,7 @@ gobnumS <- read_sheet("https://docs.google.com/spreadsheets/d/1URCJQLwtJAjhm4-3_
   
 # and plot those data
   ggplot(gobnumS) +
-    geom_boxplot(aes(y = value, x = NoseSize)) +
+    geom_boxplot(aes(y = value, x = NoseSize, fill = NoseSize)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-    facet_wrap(vars(variable), scales = "free")
+    facet_wrap(vars(variable), scales = "free") +
+    scale_fill_brewer(palette = "BuPu")
