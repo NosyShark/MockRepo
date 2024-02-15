@@ -31,18 +31,16 @@ ggplot(gobnumH) +
   facet_wrap(vars(variable), scales = "free")
   
 # adding colour to the plot to increase goblin-core aesthetic
-##ggplot(gobnumH) + 
-  ##geom_boxplot(fill = "#F0F4C3", colour = "#827717")
+
   
 # now making a dataframe with observations classified by nose size
-
 gobnumS <- read_sheet("https://docs.google.com/spreadsheets/d/1URCJQLwtJAjhm4-3__Ckocf7O76nBu-JjYJZP2a3ozA/edit#gid=0", sheet = "GoblinBoogers") %>%
     select(!c("House", "Colour", "WetDry")) %>% 
     filter(Count > 0) %>%
     pivot_longer(cols = c("Count", "MeanDiameter(mm)", "MeanWeight(g)"), 
                  names_to = "variable", values_to = "value")
   
-# and plotting those data
+# and plot those data
   ggplot(gobnumS) +
     geom_boxplot(aes(y = value, x = NoseSize)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
