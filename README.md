@@ -5,7 +5,8 @@ This is MockRepo (II)
 <br> Through the ages there have been arguments between warring goblin houses as to which lineage boasts the most and biggest bogeys. Alas! There need no longer be any bloodshed as - with some R and github skullduggery - this dispute can finally be settled. 
 <br>
 
-These data were captured in GoogleSheet
+These data were captured in GoogleSheets
+<br> https://docs.google.com/spreadsheets/d/1URCJQLwtJAjhm4-3__Ckocf7O76nBu-JjYJZP2a3ozA/edit?usp=sharing
 <br> I added an excel version in the data file for easy access
 <br> Tidied the data in R according to House -> gobnumH
 <br> Tidied the data in R according to Nose Size -> gobnumS
