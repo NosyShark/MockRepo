@@ -72,7 +72,3 @@ ggplot(gobnumS) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   facet_wrap(vars(variable), scales = "free") +
   scale_fill_brewer(palette = "BuPu")
-
-
-
-  
