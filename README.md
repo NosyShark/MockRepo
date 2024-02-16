@@ -11,6 +11,7 @@ These data were captured in GoogleSheet
 <br> Tidied the data in R according to Nose Size -> gobnumS
 <br> Tidied the data in R accoring to Colour -> gobnumC
 <br> Tidied the data in R according to Dry and Wetness -> gobnumDW
+<br> Tidied up the data by removing observations = 0 and individually isolating different variables in order to analyze the numeric variables against factors
 <br> Plotted the data of all these variables in R
 <br>
 
